@@ -1,0 +1,14 @@
+base_url = "/2024"
+title = "Compiled Thoughts"
+description = "Olav Ringdal writes about software. Now with 100% less JavaScript."
+
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[markdown]
+highlight_code = true
+highlight_theme = "ayu-dark"
+
+[extra]
+author = "Olav Ringdal"

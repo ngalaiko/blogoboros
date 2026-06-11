@@ -1,0 +1,30 @@
+# One blog, eight bodies. The routing table is the migration history.
+server {
+    listen 8080;
+    server_name _;
+
+    # The current incarnation owns the domain.
+    root /var/www/wordpress;
+    index index.php;
+
+    client_max_body_size 8m;
+
+    # The eras — each year served by the platform it was lived on.
+    location ^~ /2013/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Jekyll
+    location ^~ /2015/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Hugo
+    location ^~ /2018/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Gatsby
+    location ^~ /2020/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Next.js
+    location ^~ /2022/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Astro
+    location ^~ /2023/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Eleventy
+    location ^~ /2024/ { root /var/www/blogoboros; index index.html; try_files $uri $uri/ =404; }  # Zola
+    # 2026 is WordPress's own permalink — it falls through to index.php below.
+
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    location ~ \.php$ {
+        include fastcgi.conf;
+        fastcgi_pass unix:/run/php-fpm84.sock;
+    }
+}

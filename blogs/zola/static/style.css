@@ -1,0 +1,68 @@
+/* I wrote this CSS myself. All 60 lines of it. That's the whole point. */
+:root {
+  --bg: #0f1419;
+  --fg: #e6e1cf;
+  --muted: #5c6773;
+  --accent: #ffb454;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 65ch;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.7;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.blogoboros-banner {
+  margin: 0 -1rem;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: bold;
+}
+.blogoboros-banner a { color: var(--bg); }
+
+header { margin: 2.5rem 0; }
+.site-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--fg);
+  text-decoration: none;
+}
+.site-tagline { color: var(--muted); margin: 0.25rem 0 0; }
+
+a { color: var(--accent); }
+
+time { color: var(--muted); font-size: 0.85em; }
+
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 0.75rem; }
+.post-list time { display: block; }
+
+article h1 { line-height: 1.3; }
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--muted);
+  color: var(--muted);
+}
+
+footer {
+  margin: 4rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.8em;
+}

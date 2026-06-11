@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+mkdir -p /run/mysqld
+chown mysql:mysql /run/mysqld
+mkdir -p /var/lib/mysql
+chown -R mysql:mysql /var/lib/mysql
+if [ ! -d /var/lib/mysql/mysql ]; then
+    echo "mariadb-prepare: initializing data directory"
+    mariadb-install-db --user=mysql --datadir=/var/lib/mysql --skip-test-db >/dev/null
+fi

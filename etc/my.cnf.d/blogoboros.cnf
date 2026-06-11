@@ -1,0 +1,10 @@
+# One blog post does not need a connection pool.
+[mysqld]
+skip-networking
+socket = /run/mysqld/mysqld.sock
+innodb_buffer_pool_size = 32M
+performance_schema = OFF
+max_connections = 16
+
+[client]
+socket = /run/mysqld/mysqld.sock

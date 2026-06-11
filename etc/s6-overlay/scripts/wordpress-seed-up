@@ -1,0 +1,13 @@
+#!/bin/sh
+# Wait for mariadb to answer on its socket, then run the idempotent seeder.
+set -eu
+i=0
+until mariadb-admin --skip-ssl ping >/dev/null 2>&1; do
+    i=$((i + 1))
+    if [ "$i" -ge 60 ]; then
+        echo "wordpress-seed: mariadb did not come up within 60s" >&2
+        exit 1
+    fi
+    sleep 1
+done
+exec /usr/local/bin/seed-wordpress

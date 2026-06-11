@@ -1,0 +1,41 @@
+<p>This blog runs on WordPress now. If you have been here since the beginning, take a moment. I'll wait.</p>
+
+<h2>The audit</h2>
+
+<p>In January, snowed in at my mother's place in Lillehammer, I did something I had been avoiding for thirteen years: I read my own blog. All of it. Every incarnation. The whole archive, end to end.</p>
+
+<p>It took eleven minutes.</p>
+
+<p>Here is the complete published output of <em>Compiled Thoughts</em>, 2013&ndash;2026:</p>
+
+<ul>
+<li><a href="/2013/">2013</a> — How I migrated this blog from WordPress to Jekyll. <em>("The friction is gone. See you next week.")</em></li>
+<li><a href="/2015/">2015</a> — How I migrated this blog from Jekyll to Hugo. <em>("I have a drafts folder now. There are four drafts in it.")</em></li>
+<li><a href="/2018/">2018</a> — How I migrated this blog from Hugo to Gatsby. <em>("The friction is gone now; the writing starts for real.")</em></li>
+<li><a href="/2020/">2020</a> — How I migrated this blog from Gatsby to Next.js. <em>("Sorting algorithms post: October. Hold me to it.")</em></li>
+<li><a href="/2022/">2022</a> — How I migrated this blog from Next.js to Astro. <em>("The platform churn is, structurally, over.")</em></li>
+<li><a href="/2023/">2023</a> — How I migrated this blog from Astro to Eleventy. <em>("There is barely anything left between me and the writing now.")</em></li>
+<li><a href="/2024/">2024</a> — How I migrated this blog from Eleventy to Zola. <em>("There is nothing left to migrate to.")</em></li>
+</ul>
+
+<p>Seven posts. Seven migrations. Each one ends by promising that the writing starts now, and each one is followed by eighteen months of silence and another migration. The sorting-algorithms post has been "almost done" since the Obama administration. My blog is not a blog. It is a changelog for itself.</p>
+
+<h2>Nothing is wrong with Zola</h2>
+
+<p>I want to be precise about this, because every post above starts by blaming the tool, and I am breaking the cycle: <a href="/2024/">Zola</a> did nothing wrong. It builds in 38 milliseconds. It is one binary. It asked nothing of me. For eighteen months it sat there, perfectly maintained, zero dependencies, instantly rebuilding its one post — and I did not write a word.</p>
+
+<p>That was the experiment, and the result is in. The friction was never in the toolchain. <strong>I was optimizing the part of blogging that was already free, because it was easier than doing the part that costs.</strong> A static site generator cannot generate the static. The static was supposed to be me.</p>
+
+<h2>So: WordPress</h2>
+
+<p>This site now runs on WordPress — the actual one, PHP and a MySQL database and a theme from 2010, the entire LAMP-shaped crime scene I fled in 2013 because wp-admin got hacked and I decided the problem was architecture. There is no repository to maintain. There is no build step to feel feelings about. There is an editor, and in the editor there is a button, and the button says <strong>Publish</strong>, and that is the entire pipeline.</p>
+
+<p>Is it slower than Zola? Every page you load here is assembled at request time by an interpreted language asking a database for the same single post it served last time. By every metric I have spent thirteen years collecting, it is the worst stack I have ever run. None of those metrics, it turns out, measured anything. The bottleneck was never the server. The bottleneck reads the comments section of Hacker News at the exact hour he sets aside for writing.</p>
+
+<p>One housekeeping note for long-time readers: the yellow "this blog has moved" banner at the top of every old incarnation still works — and if you follow the banners from the top of <a href="/2013/">the 2013 blog</a>, hop by hop through every migration, you will eventually arrive back at this page. I noticed this while setting up the redirects, and I have decided to leave it exactly as it is. A man should have to look at the circle he has drawn.</p>
+
+<p>The permalinks, of course, remain <code>/year/month/title/</code> — seventeen years, eight platforms, zero broken URLs. It is the only promise this blog has ever kept. Fitting, then, that it's the one we end on. Or begin on. From here the URLs just keep going around.</p>
+
+<p>The next post will be about something. Anything. That's the only spec it has to meet, and for the first time since 2009, that's the hard part and I know it.</p>
+
+<p><em>— Olav</em></p>

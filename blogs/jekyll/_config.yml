@@ -1,0 +1,16 @@
+title: Compiled Thoughts
+author: Olav Ringdal
+email: olav@blogoboros.invalid
+description: >-
+  Olav Ringdal writes about software. No database was harmed in the
+  rendering of this page.
+
+baseurl: "/2013"
+url: ""
+
+# Kept the WordPress permalink structure so no URLs break. Cool URIs don't change.
+permalink: /:month/:title/
+
+theme: minima
+plugins:
+  - jekyll-feed

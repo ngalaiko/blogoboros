@@ -1,0 +1,12 @@
+baseURL = "/2015/"
+languageCode = "en-us"
+title = "Compiled Thoughts"
+theme = "ananke"
+
+[params]
+  description = "Olav Ringdal writes about software. This page rendered in 0.4 seconds."
+  author = "Olav Ringdal"
+  mainSections = ["posts"]
+
+[permalinks]
+  posts = "/:month/:slug/"
